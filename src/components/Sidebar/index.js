@@ -1,6 +1,7 @@
 import React from 'react';
 import {SideContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink} from './SidebarElements'
 
+
 export default function Sidebar({isOpen, toggle}){
     return(
         <SideContainer isOpen={isOpen} onClick={toggle}>
@@ -10,16 +11,16 @@ export default function Sidebar({isOpen, toggle}){
             <SidebarWrapper>
                 <SidebarMenu>
                     <SidebarLink to='about' onClick={toggle}>
-                        About
+                     About
                     </SidebarLink>
                     <SidebarLink to='stack' onClick={toggle}>
-                        Stack
+                     Stack
                     </SidebarLink>
                     <SidebarLink to='projects' onClick={toggle}>
-                        Projects
+                      Projects
                     </SidebarLink>
                     <SidebarLink to='contact' onClick={toggle}>
-                        Contact
+                     Contact
                     </SidebarLink>
                 </SidebarMenu>
             </SidebarWrapper>

@@ -3,13 +3,14 @@ import { Link as LinkR } from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
 
 export const Nav= styled.nav`
-background: #B4F8C8;
-height: 60px;
+background: #000;
+height: 80px;
 display: flex;
 justify-content: center;
 align-item: center;
 font-size:1rem;
 postion: sticky;
+top:0;
 z-index:10;
 
 @media screen and (max-width:960px) {
@@ -19,7 +20,7 @@ z-index:10;
 export const NavContainer = styled.div`
 display:flex;
 justify-content: space-between;
-height: 60px;
+height:80px;
 z-index: 1;
 width: 100%;
 padding:0 24px;
@@ -27,13 +28,18 @@ max-width:1100px;
 `
 
 export const NavLogo = styled(LinkR)`
-color: #e94560;
+color: #fff;
 dispay:flex;
 justify-self: flex-start;
-font-size: 1.5rem;
+font-size: 3rem;
+font-family: lekton;
 cursor: pointer;
 font-weight: bold;
 text-decoration: none;
+&:hover {
+    color: #e36bae;
+    transition: 0.2s ease-in-out;
+}
 `
 export const MobileIcon = styled.div`
 display: none;
@@ -45,9 +51,9 @@ display: none;
     transform: translate(-100%, 60%);
     font-size: 1.5rem;
     cursor:pointer;
-    color: #000;
+    color: #fff;
     &:hover {
-        color: #FF45B5;
+        color: #e36bae;
         transition: 0.2s ease-in-out;
     }
 }
@@ -69,18 +75,52 @@ height:60px;
 `
 
 export const NavLinks = styled(LinkS)`
-color: #000;
+color: #fff;
 display: flex;
 align-items: center;
 text-decoration: none;
+font-family: lekton;
+font-weight: bold;
 padding: 0 1rem;
 height: 100%;
 cursor:pointer;
 &:hover {
-    color: #FF45B5;
+    color: #e36bae;
     transition: 0.2s ease-in-out;
 };
-&.active{
-    border-bottom: 3px solid #fca3cc;
+&::before,
+&::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+&::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+&::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+&:hover::before,
+&:hover::after,
+&:focus::before,
+:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
 }
 `

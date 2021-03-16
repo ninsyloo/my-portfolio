@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import AboutMe from './views/About'
+import Home from './views/Home'
 
 function App() {
   return (
   <Router>
-    <AboutMe/>
+    <Home/>
   </Router>
   );
 }

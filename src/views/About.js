@@ -1,18 +1,7 @@
-import React, {useState} from 'react';
-import Navigation from '../components/Navigation'
-import Sidebar from '../components/Sidebar'
+import React from 'react';
 
-export default function AboutMe(){
-
-    const [isOpen, setIsOpen] = useState(false)
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
-
+export default function About(){
     return(
-        <>
-        <Sidebar isOpen={isOpen} toggle={toggle}/>
-        <Navigation toggle={toggle}/>
-        </>
+        <></>
     )
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Nav,
   NavContainer,
@@ -8,18 +8,24 @@ import {
   NavItem,
   NavMenu,
 } from "./NavElements.js";
-import portfolio from "../../assets/portfolio.png";
-import { FaBars } from "react-icons/fa";
+import { FaAlignJustify, FaAlignCenter, FaDev } from "react-icons/fa";
 
 export default function Navigation({toggle}) {
+  
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover)
+  }
+
   return (
     <Nav>
       <NavContainer>
         <NavLogo to="/">
-          <img src={portfolio} style={{ height: "70px", width: "70px" }} />
+          <FaDev/>
         </NavLogo>
-        <MobileIcon onClick={toggle}>
-          <FaBars/>
+        <MobileIcon onClick={toggle} onMouseEnter={onHover} onMouseLeave = {onHover}>
+          { hover? <FaAlignJustify/> : <FaAlignCenter/> }
           </MobileIcon>
         <NavMenu>
             <NavItem>
