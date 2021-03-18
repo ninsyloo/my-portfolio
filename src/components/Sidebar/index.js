@@ -10,16 +10,16 @@ export default function Sidebar({isOpen, toggle}){
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to='about' onClick={toggle}>
+                    <SidebarLink smooth={true} duration={1500} to='About' onClick={toggle}>
                      About
                     </SidebarLink>
-                    <SidebarLink to='stack' onClick={toggle}>
+                    <SidebarLink smooth={true} duration={1500} to='MyStack' onClick={toggle}>
                      Stack
                     </SidebarLink>
-                    <SidebarLink to='projects' onClick={toggle}>
+                    <SidebarLink smooth={true} duration={1500} to='Projects' onClick={toggle}>
                       Projects
                     </SidebarLink>
-                    <SidebarLink to='contact' onClick={toggle}>
+                    <SidebarLink to='Contact' onClick={toggle}>
                      Contact
                     </SidebarLink>
                 </SidebarMenu>

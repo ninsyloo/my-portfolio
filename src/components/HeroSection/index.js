@@ -1,9 +1,14 @@
-import React from 'react';
-import {HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper} from './HeroElements'
-import Video from '../../assets/keyboard.mp4'
+import React, {useState} from 'react';
+import {HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP} from './HeroElements'
+import {HeroBtnWrapper, ArrowForward, ArrowRight, Button} from '../Buttons'
+import Video from '../../assets/video3.mp4'
 
 
 export default function HeroSection(){
+    const [hover, setHover] = useState(false);
+    const onHover = () => {
+        setHover(!hover)
+    }
 
     return(
         <HeroContainer>
@@ -12,13 +17,22 @@ export default function HeroSection(){
             </HeroBg>
             <HeroContent>
                 <HeroH1>
-                   Loren Ipsun 
+                  Eve Real
                 </HeroH1>
                 <HeroP>
-                 Hi! Welcome to my universe! Enjoy your stay
+                 Welcome to my universe! Enjoy your stay
                 </HeroP>
-                <HeroBtnWrapper>
-                </HeroBtnWrapper>
+
+                {/* <HeroBtnWrapper>
+                    <Button to='contact' 
+                    onMouseEnter={onHover} 
+                    onMouseLeave={onHover}
+                    primary="true"
+                    dark="true"
+                    >
+                        Hire me {hover? <ArrowForward/> : <ArrowRight/> }
+                    </Button>
+                </HeroBtnWrapper> */}
             </HeroContent>
         </HeroContainer>
     )

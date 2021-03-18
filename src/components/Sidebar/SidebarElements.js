@@ -59,11 +59,20 @@ color: #fff;
 cursor: pointer;
 position: relative;
 white-space: nowrap;
+counter-increment: itemcounter;
 
 /**GLITCH EFFECT**/
 
-&::before,
-&::after {
+:before {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: counters(itemcounter, ".", decimal-leading-zero);
+} 
+
+:before,
+:after {
     position: absolute;
     width: 100%;
     height: 1px;
@@ -73,7 +82,7 @@ white-space: nowrap;
     pointer-events: none;
 }
 
-&::before {
+:before {
     content: '';
     /* show by default */
 }
@@ -146,7 +155,7 @@ white-space: nowrap;
     }
 }
 
-&::before {
+:before {
     height: 2px;
     opacity: 0;
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
-background: #000;
+background: transparent;
 display:flex;
 justify-content: center;
 align-items: center;
@@ -9,6 +9,23 @@ padding: 0 30px;
 height: 800px;
 position: relative;
 z-index: 1;
+
+:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background: linear-gradient(180deg,
+        rgba(0,0,0,0.2) 0%,
+        rgba(0,0,0,0.6) 100%
+        ),
+        linear-gradient(180deg,
+        rbga(0,0,0,0.2)0%, transparent 100%
+        );
+        z-index:2;
+}
 `
 /* add before styles*/
 
@@ -44,7 +61,7 @@ align-items: center;
 
 export const HeroH1 = styled.h1`
 color:#fff;
-font-family: lacquer;
+font-family: major mono display;
 font-size: 4rem;
 text-align: center;
 `
@@ -52,15 +69,8 @@ text-align: center;
 export const HeroP = styled.p`
 magin-top:24px;
 color: #fff;
-font-family: lacquer, syne mono;
+font-family: lekton,aubrey, mate, gravitas one, lacquer, syne mono;
 font-size: 2rem;
 text-align: center; 
 max-width: 600px;
-`
-
-export const HeroBtnWrapper = styled.div`
-margin-top: 32px;
-display: flex;
-flex-direction: column;
-align-items: center;
 `

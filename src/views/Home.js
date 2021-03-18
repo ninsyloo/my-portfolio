@@ -1,20 +1,19 @@
-import React, {useState} from 'react';
-import Navigation from '../components/Navigation'
-import Sidebar from '../components/Sidebar'
+import React from 'react';
 import HeroSection from '../components/HeroSection'
+import About from './About'
+import MyStack from './MyStack'
+import Projects from './Projects'
+import Contact from './Contact'
 
 export default function Home(){
 
-    const [isOpen, setIsOpen] = useState(false)
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
-
     return(
         <div>
-        <Sidebar isOpen={isOpen} toggle={toggle}/>
-        <Navigation toggle={toggle}/>
         <HeroSection/>
+        <About/>
+        <MyStack/>
+        <Projects/>
+        <Contact/>
         </div>
     )
 }

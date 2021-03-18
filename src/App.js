@@ -1,11 +1,32 @@
 import './App.css';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+//COMPONENTS & VIEWS
+import Sidebar from './components/Sidebar'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import Home from './views/Home'
+import Contact from './views/Contact'
 
 function App() {
+
+  const [isOpen, setIsOpen] = useState(false)
+  const [isLoading, setLoading] = useState(false)
+  
+  const toggle = () => {
+      setIsOpen(!isOpen)
+  }
+
   return (
   <Router>
-    <Home/>
+    <Sidebar isOpen={isOpen} toggle={toggle}/>
+    <Navigation toggle={toggle}/>
+    <Switch>
+    <Route path='/'component={Home} exact/>
+    <Route path='/contact'component={Contact} exact/>
+    </Switch>
+    <Footer/>
   </Router>
   );
 }

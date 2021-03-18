@@ -4,12 +4,14 @@ import {Link as LinkS} from 'react-scroll';
 
 export const Nav= styled.nav`
 background: #000;
+opacity: 80%;
 height: 80px;
+margin-top: -80px;
 display: flex;
 justify-content: center;
 align-item: center;
 font-size:1rem;
-postion: sticky;
+position: sticky;
 top:0;
 z-index:10;
 
@@ -31,7 +33,7 @@ export const NavLogo = styled(LinkR)`
 color: #fff;
 dispay:flex;
 justify-self: flex-start;
-font-size: 3rem;
+font-size: 4rem;
 font-family: lekton;
 cursor: pointer;
 font-weight: bold;
@@ -79,6 +81,7 @@ color: #fff;
 display: flex;
 align-items: center;
 text-decoration: none;
+font-size: 1.3rem;
 font-family: lekton;
 font-weight: bold;
 padding: 0 1rem;
