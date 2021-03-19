@@ -127,3 +127,33 @@ cursor:pointer;
 }
 }
 `
+export const NavBtn = styled.nav`
+display:flex;
+align-items: center;
+
+@media screen and (max-width: 768px){
+	display:none;
+}
+`
+
+export const NavBtnLink = styled(LinkR)`
+border-radius:50px;
+background: #fff;
+white-space: nowrap;
+padding: 10px 22px;
+color: #000;
+font-size: 1.3rem;
+font-family: lekton;
+font-weight: bold;
+outline: none;
+border: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+
+&:hover{
+	transition: all 0.2s ease-in-out;
+	background: #e36bae;
+	color: #fff;
+}
+`

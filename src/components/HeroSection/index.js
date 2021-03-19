@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import {HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP} from './HeroElements'
-import {HeroBtnWrapper, ArrowForward, ArrowRight, Button} from '../Buttons'
 import Video from '../../assets/video3.mp4'
-
+import Typical from 'react-typical'
 
 export default function HeroSection(){
     const [hover, setHover] = useState(false);
@@ -19,20 +18,11 @@ export default function HeroSection(){
                 <HeroH1>
                   Eve Real
                 </HeroH1>
-                <HeroP>
-                 Welcome to my universe! Enjoy your stay
-                </HeroP>
-
-                {/* <HeroBtnWrapper>
-                    <Button to='contact' 
-                    onMouseEnter={onHover} 
-                    onMouseLeave={onHover}
-                    primary="true"
-                    dark="true"
-                    >
-                        Hire me {hover? <ArrowForward/> : <ArrowRight/> }
-                    </Button>
-                </HeroBtnWrapper> */}
+                <Typical
+                 steps={['Welcome!', 1000, 'Enjoy your Stay', 1000]}
+                 loop={Infinity}
+                 wrapper={HeroP}
+                 />
             </HeroContent>
         </HeroContainer>
     )

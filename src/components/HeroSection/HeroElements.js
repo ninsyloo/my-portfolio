@@ -62,7 +62,7 @@ align-items: center;
 export const HeroH1 = styled.h1`
 color:#fff;
 font-family: major mono display;
-font-size: 4rem;
+font-size: 5rem;
 text-align: center;
 `
 

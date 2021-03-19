@@ -7,7 +7,6 @@ import Sidebar from './components/Sidebar'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Home from './views/Home'
-import Contact from './views/Contact'
 
 function App() {
 
@@ -24,7 +23,6 @@ function App() {
     <Navigation toggle={toggle}/>
     <Switch>
     <Route path='/'component={Home} exact/>
-    <Route path='/contact'component={Contact} exact/>
     </Switch>
     <Footer/>
   </Router>

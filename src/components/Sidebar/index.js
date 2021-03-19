@@ -19,7 +19,7 @@ export default function Sidebar({isOpen, toggle}){
                     <SidebarLink smooth={true} duration={1500} to='Projects' onClick={toggle}>
                       Projects
                     </SidebarLink>
-                    <SidebarLink to='Contact' onClick={toggle}>
+                    <SidebarLink to='Contact' smooth={true} duration={1500} onClick={toggle}>
                      Contact
                     </SidebarLink>
                 </SidebarMenu>

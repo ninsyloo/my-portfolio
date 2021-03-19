@@ -47,7 +47,7 @@ export default function Navigation({toggle}) {
                 </NavLinks>
             </NavItem>
             <NavItem>
-                <NavLinks to='Contact'>
+                <NavLinks to='Contact' smooth={true} duration={1500}>
                     Contact
                 </NavLinks>
             </NavItem>
